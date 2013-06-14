@@ -1,8 +1,13 @@
 class User < ActiveRecord::Base
 
+  has_many :albums
+  has_many :photos, :through => :albums
+
+ 
+
   attr_reader :entered_password
 
-  validates :entered_password, :length => { :minimum => 6 }
+  # validates :entered_password, :length => { :minimum => 6 }
   validates :email, :uniqueness => true, :format => /.+@.+\..+/
 
   def self.authenticate(params)
