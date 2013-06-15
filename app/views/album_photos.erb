@@ -1,0 +1,32 @@
+<!--     <%@photos.each do |photo|%> 
+<li>
+  <div class='picture-name'><%=photo.name%></div>
+   <img src="<%=(photo.file).to_s.gsub(/.*public/,"")%>"  width='300'>
+</li>
+<%end%>
+ -->
+<body>
+  <div class="container">
+  <div class="carousel_controls">
+    <a href="#" id="previous_frame">&lt;</a>
+    <a href="#" id="next_frame">&gt;</a>
+  </div>
+  
+  <div class="carousel">
+    <ul class="frames">
+    	<%@photos.each do |photo|%> 
+      <li>
+        <h2><%=photo.name%></h2>
+        <img src="<%=(photo.file).to_s.gsub(/.*public/,"")%>"  width='300'>
+      </li>
+    
+      <%end%>
+    </ul>
+  </div>
+</div>
+
+  
+
+
+
+</body>

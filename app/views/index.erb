@@ -1,28 +1,23 @@
 <div class="container">
- <h2>Albums: </h2>
- <%@albums.each do |album|%>
- <li><div>
-<br><a href='/album/<%=album.id%>'><%=album.name%></a>
-</div>
-<br>
+	<h2>Albums: </h2>
+	<%@albums.each do |album|%>
+	<div>
+	<li>
+		<a href='/album/<%=album.id%>'><%=album.name%></a>
+	</div>
+	<br>
 </li>
 <%end%>       
 
- <h2>Users: </h2>
+<h2>Users: </h2>
 
- <%@users.each do |user|%>
- <li><div>
-  <a href='/user/<%=user.id%>/albums'><%=user.first_name%></a>
+<%@users.each do |user|%>
+<li><div>
+	<a href='/user/<%=user.id%>/albums'><%=user.first_name%></a>
 </div>
 <br>
 </li>
 <%end%>               
-    <%@photos.each do |photo|%> 
-<li>
-   <img src="<%= photo.file%>" >
-</li>
-<%end%>
-
 
 
 </div>

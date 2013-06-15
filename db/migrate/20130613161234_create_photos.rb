@@ -4,7 +4,6 @@ class CreatePhotos < ActiveRecord::Migration
 
       t.string  :name
       t.string  :file
-      t.string  :photo
       t.references :album
       t.references :user
 

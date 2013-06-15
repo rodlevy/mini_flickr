@@ -36,7 +36,36 @@ $(document).ready(function() {
 
 
 
- // 1. ready
- // 2. bind event
- // 3. identify url and any vars you are going to pass
- // 4. get/post
+$(document).ready(function() {
+	
+  $("#next_frame").on('click', function(event){
+    event.preventDefault();
+    
+
+    var location = $('.frames > li').css('right');
+    console.log(location);
+    if (location > '65%'){
+      $('.frames > li').animate({right:'-=66.66%'})
+       }
+       else{
+        $('.frames > li').animate({right:'+=33.33%'})
+      };
+
+  });
+
+  $("#previous_frame").on('click', function(event){
+    event.preventDefault();
+    var location = $('.frames > li').css('right');
+    console.log(location);
+    if (location <'1%'){
+      $('.frames > li').animate({right:'+=66.66%'})
+       }
+       else{
+        $('.frames > li').animate({right:'-=33.33%'})
+      };
+
+
+
+  });
+
+});
